@@ -1,14 +1,18 @@
-let Ajax = new XMLHttpRequest();
+ const GetUserName = _ =>{
+   let UserName = document.getElementById('UserField').value;
 
-Ajax.open('GET', 'https://api.github.com/users/andersonarorjdev');
-Ajax.send(null);
-Ajax.onreadystatechange = _ =>{
-  let Dados = JSON.parse(Ajax.responseText);
-  console.log(Dados);
-  alert(Dados.login);
-}
+      let Ajax = new XMLHttpRequest();
+        Ajax.open('GET', `https://api.github.com/users/${UserName}`);
+        Ajax.send(null);
+        Ajax.onreadystatechange = _ =>{
+          let Dados = JSON.parse(Ajax.responseText);
+          let Body = document.querySelector('Body')
+          let userImage = Dados.avatar_url
+    
+            let ImageTag = document.getElementById('UserImage');
+                ImageTag.src = userImage;
+        }
+    }
 
-const CreateImageFromUSer = _ =>{
- let ProfileUser = document.createElement('img');
- ProfileUser
-}
+GetUserImage();
+
