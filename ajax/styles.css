@@ -82,6 +82,11 @@ main > h5{
   display: block;
 }
 
+#UserBio{
+  text-align: center;
+  padding:0px 80px;
+}
+
 /* Styles for Footer */
 footer{
   display: flex;
