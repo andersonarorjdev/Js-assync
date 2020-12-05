@@ -14,8 +14,8 @@
                 ImageTag.src = userImage;
           
           let UserLinkTag = document.getElementById('UserLink');
-              UserLinkTag.innerHTML = Dados.html_url;
-              UserLinkTag.location = Dados.html_url;
+              UserLinkTag.innerHTML = "Perfil no Github";
+              UserLinkTag.href = Dados.html_url;
           
           let UserNameTag = document.getElementById('UserName');
               UserNameTag.innerHTML = Dados.name;

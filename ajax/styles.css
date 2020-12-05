@@ -78,9 +78,9 @@ main{
   border-radius: 200px;
 }
 
-
-
-
+main > h5{
+  display: block;
+}
 
 /* Styles for Footer */
 footer{
