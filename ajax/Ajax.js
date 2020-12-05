@@ -6,13 +6,32 @@
         Ajax.send(null);
         Ajax.onreadystatechange = _ =>{
           let Dados = JSON.parse(Ajax.responseText);
-          let Body = document.querySelector('Body')
+            console.log(Dados);
+
+            //Data about user
           let userImage = Dados.avatar_url
-    
             let ImageTag = document.getElementById('UserImage');
                 ImageTag.src = userImage;
+          
+          let UserLinkTag = document.getElementById('UserLink');
+              UserLinkTag.innerHTML = Dados.html_url;
+              UserLinkTag.location = Dados.html_url;
+          
+          let UserNameTag = document.getElementById('UserName');
+              UserNameTag.innerHTML = Dados.name;
+
+          let UserBioTag = document.getElementById('UserBio');
+              UserBioTag.innerText = Dados.bio;
+          
+          let UserFollowersTag = document.getElementById('UserFollowers');
+              UserFollowersTag.innerHTML = Dados.followers;
+
+          let UserFollowingTag = document.getElementById('UserFollowing');
+              UserFollowingTag.innerHTML = Dados.following;
+
+          let FollowersTwitterTag = document.getElementById('UserFollowersTwitter');
+              FollowersTwitterTag.innerHTML = Dados.twitter_username;
         }
     }
 
-GetUserImage();
 

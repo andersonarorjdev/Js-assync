@@ -5,10 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="./Ajax.js"></script>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <input type="text" id="UserField">
-  <button onclick="GetUserName()" type="submit">Buscar</button>
-  <img id="UserImage" src="" alt="">
+  <header>
+    <input type="text" id="UserField">
+    <button onclick="GetUserName()" type="submit">
+      Buscar
+    </button>
+  </header>
+
+  <main>
+    <a id="UserLink" href="" target="blank"></a>
+    <img id="UserImage" src="" alt="">
+    <h1 id="UserName"></h1>
+    <p id="UserBio"></p>
+    <h5>
+      Followers <span id="UserFollowers"></span>
+      Following <span id="UserFollowing"></span>
+    </h5>
+  </main>
+
+  <footer>
+      <h5>Twitter:
+        <span id="UserFollowersTwitter"></span>
+      </h5>
+  </footer>
 </body>
 </html>
